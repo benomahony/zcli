@@ -1,0 +1,10 @@
+.{
+    .name = .zcli,
+    .version = "0.1.0",
+    .fingerprint = 0x927117ca6c82126a,
+    .minimum_zig_version = "0.16.0",
+    .dependencies = .{
+        .zrich = .{ .url = "https://github.com/benomahony/zrich/archive/3ff0f67047714f0445980c3fe03f8a8f35e27d9a.tar.gz", .hash = "zrich-0.1.0-DVxxqNsJAQAjlhRl3Ck_ET9oMq3Di_ZePMH4QrJrEtQo" },
+    },
+    .paths = .{ "build.zig", "build.zig.zon", "src", "examples", "tests", "tools", "docs", "README.md", "LICENSE" },
+}
