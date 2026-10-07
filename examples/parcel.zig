@@ -113,5 +113,5 @@ pub fn main(init: std.process.Init) void {
     rt.load_config = loadConfig;
     rt.read_line = readLine;
     const code = app.run(init.gpa, args[1..], rt);
-    std.process.exit(@intFromEnum(code));
+    std.process.exit(@backingInt(code));
 }
