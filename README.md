@@ -2,7 +2,7 @@
 
 A standalone Zig CLI framework that turns the [Command Line Interface Guidelines](https://clig.dev/) into usable defaults. **zrich is its only external dependency**, pinned to a commit in `build.zig.zon`. zrich remains a separate, unmodified presentation library. Everything else uses Zig's standard library and code in this project.
 
-This is a working first version: typed options and public records, help and examples, predictable errors, stream-aware rendering, configuration layers, guarded prompts, cancellation hooks, and executable conformance tests. Requires Zig 0.16.0 or newer; tested with 0.16.0 and Zig 0.17 development builds.
+This is a working first version: typed options and public records, help and examples, predictable errors, stream-aware rendering, configuration layers, guarded prompts, cancellation hooks, and executable conformance tests. Requires Zig 0.17.0 or newer; tested with Zig 0.17 development builds.
 
 ## Try it
 
@@ -148,11 +148,10 @@ All command scratch data and results live in an arena backed by the explicit all
 ## Verification and scope
 
 ```sh
-python3 tools/verify.py --zig16 /absolute/path/to/zig-0.16.0/zig \
-  --zig-dev /absolute/path/to/zig-dev/zig
+python3 tools/verify.py --zig /absolute/path/to/zig-0.17/zig
 ```
 
-CI runs the same unit and process tests on Zig 0.16.0 for macOS and Linux.
+CI runs the same unit and process tests on Zig master for macOS and Linux.
 
 `cli.conformance.check` runs declarative application cases with captured streams, exit checks, JSON parsing, redirected-output checks and a noninteractive runtime. Import it into downstream tests. `tests/cli_contract.py` supplies a reusable process/PTY harness with a timeout that catches accidental prompts. `tests/process_test.py` applies it to real files, independent terminals, redirected streams, configuration, preview and deletion. Unit tests add cancellation, cleanup, typed validation, source precedence and prompt callback assertions.
 
