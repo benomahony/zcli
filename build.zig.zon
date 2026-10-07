@@ -4,7 +4,7 @@
     .fingerprint = 0x927117ca6c82126a,
     .minimum_zig_version = "0.17.0",
     .dependencies = .{
-        .zrich = .{ .url = "https://github.com/benomahony/zrich/archive/64131a185533dc907459ba66ab9f0e758f2c4c2d.tar.gz", .hash = "zrich-0.1.0-DVxxqEkwAQCdosbD0hCgLHCBsWbHfWbTbnHUaAc2xEzA" },
+        .zrich = .{ .url = "https://github.com/benomahony/zrich/archive/75ec874050667953be1b1d393c6816a62c530dcc.tar.gz", .hash = "zrich-0.1.0-DVxxqKszAQBQF1D94DcFIwlEhyuijXPrK729Sh5Edn-M" },
     },
     .paths = .{ "build.zig", "build.zig.zon", "src", "examples", "tests", "tools", "docs", "README.md", "LICENSE" },
 }
